@@ -1,9 +1,4 @@
-streamlit
-pandas
-scikit-learn
-joblib
-
-
-import joblib
-
-model = joblib.load("best_random_forest_model.pkl")
+joblib>=1.2.0
+scikit-learn>=1.0.0
+streamlit>=1.0.0
+numpy>=1.20.0
