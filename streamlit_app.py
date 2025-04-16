@@ -1,9 +1,9 @@
 import streamlit as st
-#import joblib
+import joblib
 import numpy as np
 
 # Load the trained model
-model = joblib.load(r"C:\Users\basan\Desktop\datascience class\project123\best_random_forest_model.pkl")
+model = joblib.load("best_random_forest_model.pkl")
 
 st.set_page_config(page_title="Disease Prediction", layout="centered")
 st.title("Disease Prediction using Random Forest")
