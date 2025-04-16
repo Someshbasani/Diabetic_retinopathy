@@ -1,4 +1,0 @@
-joblib
-scikit-learn>=1.0.0
-streamlit>=1.0.0
-numpy>=1.20.0
