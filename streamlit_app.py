@@ -18,6 +18,13 @@ feature_3 = st.number_input("Diastolic_BP (Normal: 60-80 mmHg)", min_value=0.0, 
 feature_4 = st.number_input("Cholesterol (Normal: <200 mg/dL)", min_value=0.0, max_value=280.0)
 
 # Add more fields based on your actual model's features
+# Prediction button
+st.subheader("Prediction Retinopathy")
+if st.button("Submit"):
+    input_data = np.array([[feature_1, feature_2, feature_3, feature_4]])
+    prediction = model.predict(input_data)
+    st.subheader("Prediction Retinopathy")
+    st.write("Retinopathy" if prediction[0] == 1 else "Non_Retinopathy")
 # Blood pressure reference table
 st.markdown("### 🩸 Blood Pressure Categories")
 
@@ -75,10 +82,4 @@ st.markdown("""
 </table>
 </div>
 """, unsafe_allow_html=True)
-# Prediction button
-st.subheader("Prediction Retinopathy")
-if st.button("Submit"):
-    input_data = np.array([[feature_1, feature_2, feature_3, feature_4]])
-    prediction = model.predict(input_data)
-    st.subheader("Prediction Retinopathy")
-    st.write("Retinopathy" if prediction[0] == 1 else "Non_Retinopathy")
+
