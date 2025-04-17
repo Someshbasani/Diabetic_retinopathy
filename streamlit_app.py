@@ -13,9 +13,9 @@ st.markdown("Enter patient features to predict the prognosis.")
 # Example feature inputs (you can customize this)
 # Assuming your model was trained on 4 numerical features as an example:
 feature_1 = st.number_input("Age", min_value=0.0, max_value=100.0)
-feature_2 = st.number_input("Systolic_BP", min_value=0.0, max_value=180.0)
-feature_3 = st.number_input("Diastolic_BP", min_value=0.0, max_value=200.0)
-feature_4 = st.number_input("Cholesterol", min_value=0.0, max_value=200.0)
+feature_2 = st.number_input("Systolic_BP (Normal: 90-120 mmHg)", min_value=0.0, max_value=180.0)
+feature_3 = st.number_input("Diastolic_BP (Normal: 60-80 mmHg)", min_value=0.0, max_value=200.0)
+feature_4 = st.number_input("Cholesterol (Normal: <200 mg/dL)", min_value=0.0, max_value=280.0)
 
 # Add more fields based on your actual model's features
 
