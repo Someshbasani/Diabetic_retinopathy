@@ -18,7 +18,63 @@ feature_3 = st.number_input("Diastolic_BP (Normal: 60-80 mmHg)", min_value=0.0, 
 feature_4 = st.number_input("Cholesterol (Normal: <200 mg/dL)", min_value=0.0, max_value=280.0)
 
 # Add more fields based on your actual model's features
+# Blood pressure reference table
+st.markdown("### 🩸 Blood Pressure Categories")
 
+st.markdown("""
+<style>
+.table-container {
+    overflow-x: auto;
+}
+.custom-table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+.custom-table th, .custom-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.custom-table th {
+    background-color: #f2f2f2;
+}
+</style>
+
+<div class="table-container">
+<table class="custom-table">
+    <tr>
+        <th>Category</th>
+        <th>Systolic (mm Hg)</th>
+        <th>Diastolic (mm Hg)</th>
+    </tr>
+    <tr>
+        <td>Normal</td>
+        <td>Less than 120</td>
+        <td>Less than 80</td>
+    </tr>
+    <tr>
+        <td>Elevated</td>
+        <td>120–129</td>
+        <td>Less than 80</td>
+    </tr>
+    <tr>
+        <td>High BP (Stage 1)</td>
+        <td>130–139</td>
+        <td>80–89</td>
+    </tr>
+    <tr>
+        <td>High BP (Stage 2)</td>
+        <td>140 or higher</td>
+        <td>90 or higher</td>
+    </tr>
+    <tr>
+        <td>Hypertensive Crisis</td>
+        <td>Higher than 180</td>
+        <td>Higher than 120</td>
+    </tr>
+</table>
+</div>
+""", unsafe_allow_html=True)
 # Prediction button
 st.subheader("Prediction Retinopathy")
 if st.button("Submit"):
