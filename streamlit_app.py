@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 # Load the trained model
-model = joblib.load("best_XGBoost_model.pkl")
+model = joblib.load("best_random_forest_model.pkl")
 
 st.set_page_config(page_title="Disease Prediction", layout="centered")
 st.title("Disease Prediction using XDBoost")
